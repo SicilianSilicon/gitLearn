@@ -1,0 +1,39 @@
+---------------------------------------------------------
+$ git config --global user.name "Your Name"   # double quotation is because of space
+$ git config --global user.email "yourname@email.com"
+---------------------------------------------------------
+
+(helloworld) $ git init
+(helloworld) $ git status
+
+---------------------------------------------------------
+We next want to add all changes by using the command add -A and then commit the changes
+along with a message, (-m), describing what has changed.
+
+---------------------------------------------------------
+(helloworld) $ git add -A
+(helloworld) $ git commit -m "initial commit"  #double quotes must be typed
+---------------------------------------------------------
+
+
+“Create a new repository” page located at https://github.com
+Your first repository is now created! However there is no code in it yet. Scroll down on the page to where it says “…or push an existing repository from the command line.” That’s what we want.
+
+---------------------------------------------------------
+$ git remote add origin https://github.com/iSobiX/Hallo_Welt.git
+$ git branch -M main
+$ git push -u origin main
+---------------------------------------------------------
+Enumerating objects: 18, done.  
+Counting objects: 100% (18/18), done.
+Delta compression using up to 8 threads                                                         
+Compressing objects: 100% (16/16), done.                                                        
+Writing objects: 100% (18/18), 8.26 KiB | 1.65 MiB/s, done.                                     
+Total 18 (delta 1), reused 0 (delta 0), pack-reused 0                                           
+remote: Resolving deltas: 100% (1/1), done.                                                     
+To https://github.com/iSobiX/Hallo_Welt.git                                                     
+* [new branch]      main -> main                                                               
+Branch 'main' set up to track remote branch 'main' from 'origin'. 
+
+in case there was no ssh key:
+$ ssh-keygen -t ed25519 -C sobhanee@gmail.com

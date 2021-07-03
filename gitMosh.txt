@@ -1,0 +1,49 @@
+#We won't go on Implementaion Details
+#git repository is actually a hidden sub-directory in our project directory 
+
+$ git config --global user.name "Your Name"    #double quotation is because of space
+$ git config --global user.email yourname@email.com
+$ git config --list
+
+$ git config --global core.editor "code --wait"    #we tell the terminal window to wait until we closed the new vscode instance 
+
+$ git config --global -e    #open the gitconfig file
+
+$ git config --global core.autocrlf true/input    #windows/mac    carriage return, line feed
+
+$ git config --help
+$ git config -h
+
+--------------------------------------START-----------------------------------------------
+
+$ mkdir project && cd project
+$ git init    #Initialized empty Git repository in .../project  MAKE UR REPO
+
+#review beofre record
+#We create, edit, change, modify.... and then commit those as a new snapshot. Before making our snapshot, we can review(purpose) our changes via Staging Area or Index by adding our changes to this stage. After making a snaphot, we can change(add/edit/remove) our previous staging area and again, make a new snaphot. Remember, changes and files remain in Index(Staging Area) even after the commit. 
+
+$ git status    #checkout
+$ git add       #(file1.txt) (file1.txt file2.txt) (*.txt) (. entire directory)
+
+# We make 2 txt files. We add them to Index. We get a git staus and see that there is no change that need to be added. So far so good. Let's say we change file1. Now if we get a git status, we see two added file in Index and one new modified of file1 that has not been added to Index yet. We add the modified file. Now, we're done.
+
+$ git commit -m "Initial commit."
+$ git commit    #opens code editor
+#Now our working directory is same as our Index and is same as our snapshot.
+
+$ git commit -am "message."    #commit without the staging area.
+
+#Let's say we delete a file from our project. 
+$ ls     #file has been removed
+$ git ls-files  #removed file still exists in Index
+#If we want remove the file from the Index, then we must use add flag!
+$ git add deletedFile
+$ git rm    #delete from Index and from working directory
+
+
+
+
+
+
+
+
